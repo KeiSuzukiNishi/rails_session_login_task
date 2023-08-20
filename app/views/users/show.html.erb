@@ -1,0 +1,10 @@
+<h1>アカウント詳細ページ</h1>
+
+<p>名前: <%= @user.name %></p>
+<p>メールアドレス: <%= @user.email %></p>
+
+<div style="display: flex; align-items: center;">
+  <%= link_to "編集", edit_user_path(@user), html: { id: "edit-user" } %>
+  <p style="margin: 0 5px;">|</p>
+  <%= link_to "削除", user_path(@user), method: :delete, data: { confirm: "本当に削除してもよろしいですか？" }, html: { id: "destroy-user" } %>
+</div>
