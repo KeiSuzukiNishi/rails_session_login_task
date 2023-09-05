@@ -10,7 +10,7 @@
     <%= f.password_field :password_confirmation %>
     <br><br>
     <%= f.submit :"更新する" %><br>
-    <%= link_to "戻る", :back, html: { id: "back" } %>
+    <%= link_to "戻る", :back, id: "back"  %>
 
     <% if @user.errors.any? %>
         <div id="error_explanation">
