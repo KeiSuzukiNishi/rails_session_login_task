@@ -6,7 +6,7 @@ class User < ApplicationRecord
     validates :password, presence: { message: "パスワードを入力してください" }, length: { minimum: 6, message: "パスワードは6文字以上で入力してください" }
     validate :password_confirmation_matches
 
-    has_many :tasks
+    has_many :tasks, dependent: :destroy
 
   private
 
