@@ -6,5 +6,5 @@
 <div style="display: flex; align-items: center;">
   <%= link_to "編集", edit_user_path(@user), id: "edit-user" %>
   <p style="margin: 0 5px;">|</p>
-  <%= link_to "削除", user_path(@user), method: :delete, data: { confirm: "本当に削除してもよろしいですか？" }, id: "destroy-user" %>
+  <%= link_to "削除", logout_path, method: :delete, data: { confirm: "本当に削除してもよろしいですか？" }, id: "destroy-user" %>
 </div>
