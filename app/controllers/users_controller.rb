@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 
     def destroy
         @user = User.find(params[:id])
-        @user.destroy
+        @user.destroy_with_tasks
         redirect_to login_path
     end
 
