@@ -6,5 +6,10 @@ Rails.application.routes.draw do
   resources :users do
     get 'edit', on: :member
   end
+  
   delete '/logout', to: 'sessions#destroy'
+
+  member do
+    delete 'destroy_with_tasks'
+  end
 end
