@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :tasks
   resources :sessions, only: [:new, :create, :destroy, :show]
   
-  resources :users, only: [:new, :create, :show] do
+  resources :users, only: [:new, :create, :show, :update] do
     get 'edit', on: :member
 
     member do
