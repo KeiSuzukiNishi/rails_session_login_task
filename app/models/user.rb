@@ -9,7 +9,7 @@ class User < ApplicationRecord
     has_many :tasks, dependent: :destroy
 
     def destroy_with_tasks
-      @user.destroy
+      self.destroy
     end
     
   private
