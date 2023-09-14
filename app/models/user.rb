@@ -9,8 +9,7 @@ class User < ApplicationRecord
     has_many :tasks, dependent: :destroy
 
     def destroy_with_tasks
-      tasks.destroy_all # このユーザーに紐づいているすべてのタスクを削除
-      destroy # ユーザー自体を削除
+      @user.destroy
     end
     
   private
